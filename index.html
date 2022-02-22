@@ -63,11 +63,14 @@
       
        
     
-  var dIP = null;
-   var data = [];
+    var dIP1 = null;
+    var dIP2 = null;
+    var dIP = null;
+    var data = [];
   // Using Async/Await:
   (async function(){
-      data = await getIPs();
+      data[0] = await getIPs();
+      data[1] = await getIPs();
       dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
