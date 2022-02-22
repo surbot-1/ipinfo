@@ -13,12 +13,15 @@
     
   <script>
       
+      IP
+    
     $.get("http://ipinfo.info", function (response) {
+        var dIP = response.ip;
         alert(response.ip);
         }, "json") 
       
       
-    alert("response") ;
+   
       
 /* var GetIpInfo = function(ipAddr) {
     var info = null;
