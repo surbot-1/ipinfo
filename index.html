@@ -62,18 +62,18 @@ IP
       
       
        
-    var dIP;
-    var check = false;
+    var dIP = null;
+  //  var check = false;
   // Using Async/Await:
   (async function(){
   let data = await getIPs();
       dIP = data;
-      check = true;
+    // check = true;
     //  if (check) { clearInterval(refresh); }
     })();
   var refresh  = setInterval (function() {
   document.getElementById("div1").innerHTML+="IP"+dIP;
-      if (check) { clearInterval(refresh); check = false; }
+      if (dIP = !null) { clearInterval(refresh); dIP = null; }
       }, 1000) ;
    
 
