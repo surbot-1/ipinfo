@@ -27,8 +27,9 @@ IP
       
             getIP();
    function getIP() {
-             dIP = getIPs().then(res => document.write(res.join('\n')))
+            var dIP = getIPs().then(res => document.write(res.join('\n')))
              // dIP = res.join('\n');
+            document.getElementById("div1').innerHTML+=dIP;
               } 
       
    
