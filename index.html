@@ -61,21 +61,24 @@
   })  */
       
       
-       
-    
+        getIP();
+  function getIP() {
     var dIP1 = null;
     var dIP2 = null;
     var dIP = null;
     var data = [];
   // Using Async/Await:
   (async function(){
-      data[0] = await getIPs();
-      data[1] = await getIPs();
+      data = await getIPs();
+      if (data[1] == null) {getIP();
+      } else {
       dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
       writeIP();
+       }
       })();
+     }
   function writeIP() {
           document.getElementById("div1").innerHTML+="IP "+dIP2;
           }
