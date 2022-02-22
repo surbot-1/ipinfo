@@ -70,10 +70,10 @@
    // Using Async/Await:
    (async function(){
     data = await getIPs();
-    check: while(data[1]== null) {
-          if( data[1]== null) {continue check;}
-            else { break;}
-      }
+    check: while(data[1]== null) {continue check;}
+          
+            
+      
       dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
