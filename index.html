@@ -66,8 +66,10 @@
   var dIP = null;
   // Using Async/Await:
   (async function(){
-  let data = await getIPs();
-      dIP = data;
+  let data[] = await getIPs();
+      dIP1 = data[0];
+      dIP2 = data[1];
+      dIP = dIP1+" "+dIP2;
       writeIP();
       })();
   function writeIP() {
