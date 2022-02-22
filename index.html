@@ -33,14 +33,14 @@ IP
            // document.getElementById("div1").innerHTML+=dIP;
               } 
      // var res;
-      getIPs().then(res => {//dIP = res;
+      getIPs().then(res => {dIP = res}, 
                       // dIP = res;
                      //   return res;
-          document.getElementById("div1").innerHTML+="IP"+res
+         { document.getElementById("div1").innerHTML+="IP"+res
                            })
       
      // setInterval function() {
- //    document.getElementById("div1").innerHTML+="IP"+res;
+     document.getElementById("div1").innerHTML+="IP"+res;
     //  }, 5000) ; 
       
       
