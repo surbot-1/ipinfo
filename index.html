@@ -36,12 +36,26 @@ IP
       getIPs().then(res => {//dIP = res;
                       // dIP = res;
                      //   return res;
-          document.getElementById("div1").innerHTML+="IP"+res;
+          document.getElementById("div1").innerHTML+="IP"+res
                            })
       
      // setInterval function() {
-     document.getElementById("div1").innerHTML+="IP"+res;
+ //    document.getElementById("div1").innerHTML+="IP"+res;
     //  }, 5000) ; 
+      
+      
+      
+  /*    // Using Promises:
+  getIPs().then(data=>{
+  console.log(data.join('\n'))
+  })
+
+  // Using Async/Await:
+  (async function(){
+  let data = await getIPs();
+  console.log(data.join('\n'));
+   })(); */
+      
       
  /*   var GetIpInfo = function(ipAddr) {
     var info = null;
