@@ -64,9 +64,10 @@
        
     
   var dIP = null;
+   var data = [];
   // Using Async/Await:
   (async function(){
-  let data[] = await getIPs();
+      data = await getIPs();
       dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
