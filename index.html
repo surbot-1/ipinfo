@@ -63,7 +63,14 @@ IP
   })  */
       
       
-        getIP();
+        
+
+          
+            
+      alert('1');
+      
+      
+    getIP();
   function getIP() {
     var dIP1 = null;
     var dIP2 = null;
@@ -74,19 +81,12 @@ IP
     data = await getIPs();
   // while(data[1] == null) {
       //  if(data[1] != null) {break;}
-
-          
-            
-      
-      dIP1 = data[0];
+     dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
       writeIP();
        })();
       }
-      
-      
-     
   function writeIP() {
           document.getElementById("div1").innerHTML+="IP "+dIP2;
           }
