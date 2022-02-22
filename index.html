@@ -34,8 +34,9 @@ IP
               } 
      // var res;
      getIPs().then((res)=> {dIP = res}) 
+      setInterval function() {
      document.getElementById("div1").innerHTML+="IP"+res;
-   
+      }, 5000) ;
       
 /* var GetIpInfo = function(ipAddr) {
     var info = null;
