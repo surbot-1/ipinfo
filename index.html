@@ -11,6 +11,7 @@
 IP
 <div id="div1"></div>
 <div id="div2"></div>
+<div id="div3"></div>
     
     
 <script src="https://cdn.jsdelivr.net/gh/joeymalvinni/webrtc-ip/dist/production.min.js"></script>
@@ -102,7 +103,21 @@ IP
           } */
       
       
-  
+  var GetIpInfo = function(ipAddr) {
+    var info = null;
+    var infoUrl = "http://ipinfo.io/" + ipAddr;
+    $.ajax({
+        url: infoUrl,
+        type: 'GET',
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            info = data;
+            document.getElementById("div3").innerHTML+=info;
+        }
+    });
+    return info;
+};
    
       
    
