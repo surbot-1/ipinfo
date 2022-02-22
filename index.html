@@ -61,20 +61,22 @@ IP
   })  */
       
       
-   var dIP;
-       var c = false;
+       
+    var dIP;
+    var check = false;
   // Using Async/Await:
   (async function(){
   let data = await getIPs();
- // console.log(data.join('\n'));
-    
-   dIP = data;
-      c = true;
-//  document.getElementById("div1").innerHTML+="IP"+data;
-   })();
-   setInterval (function() {
+      dIP = data;
+      check = true;
+      if (check) { clearInterval(refresh); }
+    })();
+  var refresh  = setInterval (function() {
   document.getElementById("div1").innerHTML+="IP"+dIP;
       }, 1000) ;
+   
+
+   
       
       
 /* const canvas = document.getElementById('canv');
