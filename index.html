@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>editApp</title>
+</head>
+  
+<body>
+  
+  <script>
+var GetIpInfo = function(ipAddr) {
+    var info = null;
+    var infoUrl = "http://ipinfo.io/" + ipAddr;
+    $.ajax({
+        url: infoUrl,
+        type: 'GET',
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            info = data;
+            document.getElementById("div1").innerHTML = info;
+        }
+    });
+    return info;
+};
+  
+  </script>
+    
+  </body>
+</html>
