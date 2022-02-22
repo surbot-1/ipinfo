@@ -10,6 +10,7 @@
     
 IP
 <div id="div1"></div>
+<div id="div2"></div>
     
     
 <script src="https://cdn.jsdelivr.net/gh/joeymalvinni/webrtc-ip/dist/production.min.js"></script>
@@ -67,7 +68,7 @@ IP
 
           
             
-      alert('3');
+      
       
       
     getIP();
@@ -80,20 +81,21 @@ IP
    // Using Async/Await:
    (async function(){
     data = await getIPs();
-     while(data[1] != null) {
-         document.getElementById("div1").innerHTML+=data[0];
-      if(data[1] != null) {break;}
+     while( data[0] == null || data[1] == null) {
+     if( data[0] != null && data[1] != null) {break;}
          }
-     dIP1 = data[0];
+      dIP1 = data[0];
       dIP2 = data[1];
       dIP = dIP1+" "+dIP2;
-     //  document.getElementById("div1").innerHTML+=dIP2;
-       writeIP();
+      writeIP();
        })();
       }
+      
+      
      // writeIP();
       function writeIP() {
-          document.getElementById("div1").innerHTML+="IP "+dIP2;
+          document.getElementById("div1").innerHTML+="IP "+dIP1;
+          document.getElementById("div2").innerHTML+="IP "+dIP2;
           }
     /*  function writeIP() {
          document.getElementById("div1").innerHTML+="IP "+dIP1;
