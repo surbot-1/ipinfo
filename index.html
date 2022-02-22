@@ -66,8 +66,10 @@ IP
   (async function(){
   let data = await getIPs();
  // console.log(data.join('\n'));
+   dIP = data;
   document.getElementById("div1").innerHTML+="IP"+data;
    })(); 
+  document.getElementById("div1").innerHTML+="IP"+dIP;
       
       
       
