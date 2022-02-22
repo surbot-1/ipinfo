@@ -67,7 +67,7 @@ IP
 
           
             
-      alert('8');
+      alert('2');
       
       
     getIP();
@@ -81,6 +81,7 @@ IP
    (async function(){
     data = await getIPs();
      while(data[1] == null) {
+         document.getElementById("div1").innerHTML+=data[0];
       if(data[1] != null) {break;}
          }
      dIP1 = data[0];
