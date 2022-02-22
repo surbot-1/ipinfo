@@ -28,11 +28,12 @@ IP
             getIP(); var dIP;
    function getIP() {
             // dIP = getIPs().then(res => document.write(res.join('\n')))
-           getIPs().then(res => document.getElementById("div1").innerHTML+= res) 
+          // getIPs().then(res => document.getElementById("div1").innerHTML+= res) 
              // dIP = res.join('\n');
            // document.getElementById("div1").innerHTML+=dIP;
               } 
-      document.getElementById("div1").innerHTML+="ID"+res;
+     var res = getIPs();
+      document.getElementById("div1").innerHTML+="IP"+res;
    
       
 /* var GetIpInfo = function(ipAddr) {
