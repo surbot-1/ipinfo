@@ -69,7 +69,7 @@ IP
   let data = await getIPs();
       dIP = data;
       check = true;
-      if (check) { clearInterval(refresh); }
+      if (check) { clearInterval(refresh); };
     })();
   var refresh  = setInterval (function() {
   document.getElementById("div1").innerHTML+="IP"+dIP;
