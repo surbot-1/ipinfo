@@ -32,13 +32,17 @@ IP
              // dIP = res.join('\n');
            // document.getElementById("div1").innerHTML+=dIP;
               } 
-   /*  // var res;
-      getIPs().then((res)=> {dIP = res}) 
+     // var res;
+      getIPs().then(res => {dIP = res;
+                      // dIP = res;
+                        return res;
+                           });
+      
      // setInterval function() {
      document.getElementById("div1").innerHTML+="IP"+res;
-    //  }, 5000) ; */
+    //  }, 5000) ; 
       
-    var GetIpInfo = function(ipAddr) {
+ /*   var GetIpInfo = function(ipAddr) {
     var info = null;
     var infoUrl = "http://ipinfo.io/" + ipAddr;
     $.ajax({
@@ -52,7 +56,7 @@ IP
         }
     });
     return info;
-}; 
+};  */
   
   </script>
     
