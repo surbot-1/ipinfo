@@ -12,7 +12,15 @@
  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
   <script>
-var GetIpInfo = function(ipAddr) {
+      
+    $.get("http://ipinfo.info", function (response) {
+        alert(response.ip);
+        }, "json") 
+      
+      
+    alert("response") ;
+      
+/* var GetIpInfo = function(ipAddr) {
     var info = null;
     var infoUrl = "http://ipinfo.io/" + ipAddr;
     $.ajax({
@@ -26,7 +34,7 @@ var GetIpInfo = function(ipAddr) {
         }
     });
     return info;
-};
+}; */
   
   </script>
     
