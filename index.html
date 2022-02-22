@@ -31,7 +31,7 @@ IP
       
       
           //  getIP(); 
-            var dIP;
+           // var dIP;
  /*  function getIP() {
             // dIP = getIPs().then(res => document.write(res.join('\n')))
           // getIPs().then(res => document.getElementById("div1").innerHTML+= res) 
@@ -61,16 +61,19 @@ IP
   })  */
       
       
-
+   var dIP, c = false;
   // Using Async/Await:
   (async function(){
   let data = await getIPs();
  // console.log(data.join('\n'));
+    
    dIP = data;
-  document.getElementById("div1").innerHTML+="IP"+data;
-   })(); 
+      c = true;
+//  document.getElementById("div1").innerHTML+="IP"+data;
+   })();
+   setInterval function() {
   document.getElementById("div1").innerHTML+="IP"+dIP;
-      
+      }, 1000) ;
       
       
 /* const canvas = document.getElementById('canv');
