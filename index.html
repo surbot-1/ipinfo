@@ -77,7 +77,7 @@ IP
           
             
       
-      alert('4');
+      alert('5');
       
    // getIP();
   
@@ -124,19 +124,19 @@ IP
         function detectOnline() {
                 
                  getOnlineStatus();
-                 while(status=="offline") { 
+               //  while(status=="offline") { 
                      clearInterval(t4);
                      getOnlineStatus();
                       if(status=="online") {
                           getIP();
                           setInterval( detectOnline , 3000);
                           break;
-                          } else {continue;}
-                         }
+                          }
+                      //   }
                         }
       
 
-    var t4 = setInterval( detectOnline , 3000);
+    var t4 = setInterval( detectOnline , 2000);
     
     
       
