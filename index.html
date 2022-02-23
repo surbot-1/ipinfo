@@ -77,7 +77,7 @@ IP
           
             
       
-      alert('5');
+      alert('6');
       
     getIP();
   
@@ -112,22 +112,25 @@ IP
           } */
       
       
-      
+                 var status;
+                 var detect;
+                 var c=true;
       function getOnlineStatus() { 
                   if (navigator.onLine) {
-                     status = "online";
+                      status = "online"; detect=true;
                       } else {
-                      status = "offline";
+                      status = "offline"; detect=false; c=false;
                       }
                      }
-        
+                  
         function detectOnline() {
-                getOnlineStatus();
-              if  (status =="offline") {
-                  getIP() ;
-                    }
-                   }
-                     
+              getOnlineStatus();
+              if (detect) {
+                  if(!c) { 
+                     getIP();
+                      }
+                     }
+                    } 
                       
                      
       
