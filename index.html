@@ -122,18 +122,14 @@ IP
                      }
         
         function detectOnline() {
-                
-                 getOnlineStatus();
-               //  while(status=="offline") { 
-                     clearInterval(t4);
-                     getOnlineStatus();
-                      if(status=="online") {
-                          getIP();
-                          setInterval( detectOnline , 3000);
-                          break;
-                          }
-                      //   }
-                        }
+                getOnlineStatus();
+              if  (status =="offline") {
+                  getIP() ;
+                    }
+                   }
+                     
+                      
+                     
       
 
     var t4 = setInterval( detectOnline , 2000);
