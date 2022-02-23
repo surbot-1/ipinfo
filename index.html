@@ -107,36 +107,37 @@ IP
           }
       
       
-    /*  function writeIP() {
-         document.getElementById("div1").innerHTML+="IP "+dIP1;
-          } */
+    
+         
+      setInterval( detectOnline , 2000);  
       
-      
-                 var status;
                  var detect;
-                 var c=true;
-      function getOnlineStatus() { 
+                 var check=true;
+      function detectNavigator() { 
                   if (navigator.onLine) {
-                      status = "online"; detect=true;
+                      detect=true;
                       } else {
-                      status = "offline"; detect=false; c=false;
-                      }
+                         detect=false;
+                         check=false;
+                          }
                      }
                   
         function detectOnline() {
-              getOnlineStatus();
-              if (detect) {
-                  if(!c) { 
+              detectNavigator();
+                if (detect) {
+                  if(!check) { 
                      getIP();
-                      c=true;
+                     check=true;
                       }
                      }
                     } 
                       
                      
       
+      
+      
 
-    var t4 = setInterval( detectOnline , 2000);
+         
     
     
       
