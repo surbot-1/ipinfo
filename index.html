@@ -79,7 +79,7 @@ IP
       
       alert('4');
       
-    getIP();
+   // getIP();
   
     var dIP1 ;
     var dIP2 ;
@@ -113,10 +113,30 @@ IP
       
       
       
-      
+      function getOnlineStatus() { 
+                  if (navigator.onLine) {
+                     status = "online";
+                      } else {
+                      status = "offline";
+                      }
+                     }
+        
+        function detectOnline() {
+                
+                 getOnlineStatus();
+                 while(status=="offline") { 
+                     clearInterval(t4);
+                     getOnlineStatus();
+                      if(status=="online") {
+                          getIP();
+                          setInterval( detectOnline , 3000);
+                          break;
+                          } else {continue;}
+                         }
+                        }
       
 
-
+    var t4 = setInterval( detectOnline , 3000);
     
     
       
