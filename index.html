@@ -124,9 +124,9 @@ IPv4
            ipReceived=true;
            clearInterval(t1);
            clearInterval(t2);
-            } // else if( !ipReceived) {
-               // getIP();
-               // }
+            }  else if( data[1] = null   ) {
+                ipReceived=false;
+                }
           document.getElementById("div5").innerHTML+="<br>"+"IP "+"<br>"+data+"<br>"+dIP+"<br>"+dIP1+"<br>"+dIP2;
            }, 0100);
        
@@ -134,9 +134,10 @@ IPv4
             if( !ipReceived) {
                 clearInterval(t1);
                 getIP();
-                } // else if(ipReceived) {
-                  // clearInterval(t2);
-                  // }
+                }  else if(ipReceived) {
+                   clearInterval(t1);
+                   clearInterval(t2);
+                   }
            }, 5000) ;
        
        // })();
