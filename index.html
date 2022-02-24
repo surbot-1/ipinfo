@@ -87,11 +87,14 @@ IPv4
     var dIP ;
     var data = null;
     function getIP() {
+        var t = setTimeout(bk, 4000);
+      //  function bk() {break;}
    // Using Async/Await:
    (async function(){
     data = await getIPs();
      while( data[0] == null || data[1] == null) {
   if( data[0] != null && data[1] != null) {break;}
+         function bk() {break;}
     }
       dIP1 = data[0];
       dIP2 = data[1];
