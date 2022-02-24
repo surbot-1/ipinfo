@@ -107,6 +107,11 @@ IPv4
      // var data ;
    (async function(){
           data = await getIPs();
+       
+           dIP1 = data[0];
+           dIP2 = data[1];
+           dIP = data;
+           writeIP();
           })();
          }
           var t1 = setInterval( function() {
