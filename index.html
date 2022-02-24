@@ -82,17 +82,17 @@
   getIPs().then(data=>{
   console.log(data.join('\n'))
   })  */
-      alert('3');
+      alert('5');
        getIP();
       var dIP=[];
-      var data;
+      // var data;
       function getIP() {
         (async function () {
-           data = await getIPs();
+         let  data = await getIPs();
              for(let i = 0; i < 2; i++){
-                  dIP[i]=data[i];
+                  dIP+=data[i];
                 // writeIP();
-                 document.getElementById("div5").innerHTML+="<br>"+dIP[i];
+                 document.getElementById("div5").innerHTML+="<br>"+dIP;
                if (i==1 && data[i]!=null) {
                  ipReceived=true;
                  }
@@ -100,9 +100,9 @@
              })();
            }  
          
-   //   function writeIP() {
-             //   document.getElementById("div5").innerHTML+="<br>"+data[i];
-             //   }
+      function writeIP() {
+                document.getElementById("div5").innerHTML+="<br>"+dIP[i];
+                }
       
         
         var ipReceived=false;
@@ -120,7 +120,7 @@
                      
                      
                      
-         // setInterval(detectOnline,1000);
+        //  setInterval(detectOnline,1000);
         
    
           
