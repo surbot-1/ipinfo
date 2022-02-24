@@ -108,10 +108,10 @@ IPv4
    (async function(){
           data = await getIPs();
        
-         /*  dIP1 = data[0];
+           dIP1 = data[0];
            dIP2 = data[1];
            dIP = data;
-           writeIP(); */
+           writeIP(); 
            
           })();
          }
@@ -127,7 +127,7 @@ IPv4
             } // else if( !ipReceived) {
                // getIP();
                // }
-          document.getElementById("div5").innerHTML+="<br>"+"IP "+data;
+          document.getElementById("div5").innerHTML+="<br>"+"IP "+data +dIP+dIP1+dIP2;
            }, 0100);
        
        var t2 = setInterval( function() {
