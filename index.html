@@ -85,12 +85,12 @@
       
        getIP();
       function getIP() {
-          window.onload = async function () {
-          let data = await getIPs()
+         /* window.onload = */ (async function () {
+          let data = await getIPs();
              for(let i = 0; i < data.length; i++){
               document.getElementById('div6').innerHTML += `<li>${data[i]}</li>`
           }
-         }
+         })();
        }  
       
        function detectNavigator() { 
@@ -105,14 +105,14 @@
         var detect=false;
         var ipReceived=false;
         function detectOnline() {
-             detectNavigator();
-                if (!detect) {
-                    ipReceived=false;
-                    }
-                if (detect) {
-                    if(!ipReceived){
-                         getIP();
-                         ipReceived=true;
+                  detectNavigator();
+                      if (!detect) {
+                        ipReceived=false;
+                         }
+                        if (detect) {
+                        if(!ipReceived){
+                          getIP();
+                          ipReceived=true;
                          }
                        }
                      } 
