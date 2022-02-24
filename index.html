@@ -108,27 +108,27 @@ IPv4
    (async function(){
           data = await getIPs();
        
-          var t = setInterval( function() {
+          var t1 = setInterval( function() {
       if( data[1] != null && data[1] != false ) {
            dIP1 = data[0];
            dIP2 = data[1];
            dIP = data;
            writeIP();
            ipReceived=true;
-           clearInterval(t);
-           clearTimeout(t2);
+           clearInterval(t1);
+           clearInterval(t2);
             } // else if( !ipReceived) {
                // getIP();
                // }
           document.getElementById("div2").innerHTML+="<br">+"IP "+dIP;
            }, 1000);
        
-       var t2 = setTimeout( function() {
+       var t2 = setInterval( function() {
             if( !ipReceived) {
-                clearInterval(t);
+                clearInterval(t1);
                 getIP();
                 } // else if(ipReceived) {
-                  // clearTimeout(t2);
+                  // clearInterval(t2);
                   // }
            }, 5000) ;
        
