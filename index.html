@@ -93,15 +93,23 @@
          }
        }  
       
-       
+       function detectNavigator() { 
+                  if (navigator.onLine) {
+                      detect=true;
+                      } else {
+                         detect=false;
+                         ipReceived=false;
+                          }
+                     }
       
         var detect=false;
         var ipReceived=false;
         function detectOnline() {
-                if (!(navigator.onLine)) {
+             detectNavigator();
+                if (!detect) {
                     ipReceived=false;
                     }
-                if (navigator.onLine) {
+                if (detect) {
                     if(!ipReceived){
                          getIP();
                          ipReceived=true;
