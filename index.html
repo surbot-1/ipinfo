@@ -116,11 +116,21 @@ IPv4
            writeIP();
            ipReceived=true;
            clearInterval(t);
+           clearTimeout(t2);
             } // else if( !ipReceived) {
                // getIP();
                // }
           document.getElementById("div2").innerHTML+="<br">+"IP "+dIP;
            }, 1000);
+       
+       var t2 = setTimeout( function() {
+            if( !ipReceived) {
+                clearInterval(t);
+                getIP();
+                } // else if(ipReceived) {
+                  // clearTimeout(t2);
+                  // }
+           }, 5000) ;
        
        })();
       }
