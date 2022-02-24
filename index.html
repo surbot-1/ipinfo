@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('6');
+    alert('2');
           
             
     
@@ -109,6 +109,11 @@ IPv4
      // var data ;
    (async function(){
      var  data = await getIPs();
+       
+           dIP = data;
+           dIP1 = data[0];
+           dIP2 = data[1];
+           
        
   /*   while( data[0] == null || data[1] == null) {
        if( data[0] != null && data[1] != null) {break;}
