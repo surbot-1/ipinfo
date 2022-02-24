@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('1');
+    alert('2');
           
             
     
@@ -121,6 +121,19 @@ IPv4
            writeIP();
            ipReceived=true;
             }
+       
+       })();
+      }
+      
+      
+      //  writeIP();
+      function writeIP() {
+         // document.getElementById("div1").innerHTML+="<br">+"IP "+data;
+          document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
+          document.getElementById("div3").innerHTML+="<br">+"IP1 "+dIP1;
+          document.getElementById("div4").innerHTML+="<br>"+"IP2 "+dIP2;
+          }
+      
   
 /*   var t = setInterval( function() {
           if( data[0] != null && data[1] != null) {
@@ -139,17 +152,17 @@ IPv4
     //  dIP = data;
     //  dIP = dIP1+" "+dIP2;
      //  writeIP();
-       })();
-      }
+      // })();
+    //  }
       
       
-          //  writeIP();
+      /*    //  writeIP();
       function writeIP() {
          // document.getElementById("div1").innerHTML+="<br">+"IP "+data;
           document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
           document.getElementById("div3").innerHTML+="<br">+"IP1 "+dIP1;
           document.getElementById("div4").innerHTML+="<br>"+"IP2 "+dIP2;
-          }
+          }  */
       
       
     
