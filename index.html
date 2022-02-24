@@ -87,10 +87,10 @@
       var IP;
       function getIP() {
         (async function () {
-          let data = await getIPs();
+         let data = await getIPs();
              for(let i = 0; i < 2; i++){
                  IP[i]=data[i]; writeIP();
-               if (data[i-1]!=null && data[i]!=null) {
+               if (data[i==1 && data[i]!=null) {
                  ipReceived=true;
                  }
                 }
