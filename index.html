@@ -132,7 +132,7 @@ IPv4
        
        var t2 = setInterval( function() {
             if( !ipReceived) {
-                clearInterval(t1);
+               // clearInterval(t1);
                 getIP();
                 }  else if(ipReceived) {
                    clearInterval(t1);
