@@ -102,18 +102,28 @@ IPv4
     
             getIP();
     function getIP() {
-       // var bk=false;
-      //  setTimeout(stop1, 4000);
-      //  function stop1() {bk=true;}
+       
    // Using Async/Await:
      // var data ;
    (async function(){
           data = await getIPs();
        
-          // dIP = data;
-          //  dIP1 = data[0];
-          // dIP2 = data[1];
-           
+          var t = setInterval( function() {
+      if( data[1] != null && data[1] != false ) {
+           dIP1 = data[0];
+           dIP2 = data[1];
+           dIP = data;
+           writeIP();
+           ipReceived=true;
+           clearInterval(t);
+            } // else if( !ipReceived) {
+               // getIP();
+               // }
+          document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
+           }, 1000);
+       
+       })();
+      }
        
   /*   while( data[0] == null || data[1] == null) {
        if( data[0] != null && data[1] != null) {break;}
@@ -130,10 +140,9 @@ IPv4
            dIP2 = data[1];
            dIP = data;
            writeIP();  */
-       })();
-      }
+       
       
-      var t = setInterval( function() {
+    /*  var t = setInterval( function() {
       if( data[1] != null && data[1] != false ) {
            dIP1 = data[0];
            dIP2 = data[1];
@@ -141,11 +150,11 @@ IPv4
            writeIP();
            ipReceived=true;
            clearInterval(t);
-            } else if( !ipReceived) {
-                getIP();
-                }
+            } // else if( !ipReceived) {
+               // getIP();
+               // }
           document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
-           }, 1000);
+           }, 1000); */
       
       //  writeIP();
       function writeIP() {
@@ -173,8 +182,8 @@ IPv4
     //  dIP = data;
     //  dIP = dIP1+" "+dIP2;
      //  writeIP();
-      // })();
-    //  }
+      
+    
       
       
       /*    //  writeIP();
