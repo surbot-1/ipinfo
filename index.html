@@ -84,17 +84,33 @@
   })  */
       
       
+      function getIP() {
+          window.onload = async function () {
+          let data = await getIPs()
+             for(let i = 0; i < data.length; i++){
+              document.getElementById('div6').innerHTML += `<li>${data[i]}</li>`
+          }
+         }
+       }  
       
-      window.onload = async function () {
-  let data = await getIPs()
-  for(let i = 0; i < data.length; i++){
-    document.getElementById('div6').innerHTML += `<li>${data[i]}</li>`
-  }
-}
+       
       
-      
-      
-      
+        var detect=false;
+        var ipReceived=false;
+        function detectOnline() {
+                if (!navigator.onLine) {
+                    ipReceived=false;
+                    }
+                if (navigator.onLine) {
+                    if(!ipReceived){
+                         getIP();
+                         ipReceived=true;
+                         }
+                       }
+                     } 
+                     
+                     
+          setInterval(detectOnline,1000);
         
    
           
