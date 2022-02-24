@@ -79,7 +79,7 @@ IPv4
       
       
         
-    alert('4');
+    alert('5');
           
             
     
@@ -119,6 +119,7 @@ IPv4
             
     //  dIP1 = data[0];
     //  dIP2 = data[1];
+        dIP = data;
     //  dIP = dIP1+" "+dIP2;
       writeIP();
        })();
@@ -128,9 +129,9 @@ IPv4
       writeIP();
       function writeIP() {
           document.getElementById("div1").innerHTML+="<br">+"IP "+data;
-      //    document.getElementById("div2").innerHTML+="<br">+"IP "+dIP;
-         // document.getElementById("div3").innerHTML+="<br">+"IP "+dIP1;
-       //   document.getElementById("div4").innerHTML+="<br>"+"IP "+dIP2;
+          document.getElementById("div2").innerHTML+="<br">+"IP "+dIP;
+          document.getElementById("div3").innerHTML+="<br">+"IP "+dIP1;
+          document.getElementById("div4").innerHTML+="<br>"+"IP "+dIP2;
           }
       
       
