@@ -88,7 +88,7 @@
          /* window.onload = */ (async function () {
           let data = await getIPs();
              for(let i = 0; i < data.length; i++){
-              document.getElementById('div6').innerHTML += `<li>${data[i]}</li>`
+              document.getElementById('div6').innerHTML += `<p>${data[i]}</p>`
           }
          })();
        }  
@@ -105,8 +105,8 @@
         var detect=false;
         var ipReceived=false;
         function detectOnline() {
-                 // detectNavigator();
-                      if (!navigator.onLine) {
+                 
+                      if (navigator.onLine) {
                         ipReceived=false;
                          }
                         if   (navigator.onLine)  {
