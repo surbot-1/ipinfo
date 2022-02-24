@@ -82,7 +82,7 @@
   getIPs().then(data=>{
   console.log(data.join('\n'))
   })  */
-      alert('1');
+      alert('2');
        
       getIP();
       var dIP=[];
@@ -90,9 +90,9 @@
         (async function () {
          let  data = await getIPs();
              for(let i = 0; i < 2; i++){
-                  dIP+=data[i];
-                // writeIP();
-                 document.getElementById("div5").innerHTML+="<br>"+dIP;
+                  dIP[i]=data[i];
+                   writeIP();
+               //  document.getElementById("div5").innerHTML+="<br>"+dIP;
                if (i==1 && data[i]!=null) {
                  ipReceived=true;
                  }
