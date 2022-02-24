@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('4');
+    alert('5');
           
             
     
@@ -105,9 +105,9 @@ IPv4
    (async function(){
    data = await getIPs();
        
-    /* while( data[0] == null || data[1] == null) {
+     while( data[0] == null || data[1] == null) {
     if( data[0] != null && data[1] != null) {break;}
-      } */
+      } 
   
 /*   var t = setInterval( function() {
           if( data[0] != null && data[1] != null) {
@@ -123,8 +123,8 @@ IPv4
             
       dIP1 = data[0];
       dIP2 = data[1];
-        dIP = data;
-    //  dIP = dIP1+" "+dIP2;
+       // dIP = data;
+      dIP = dIP1+" "+dIP2;
       writeIP();
        })();
       }
