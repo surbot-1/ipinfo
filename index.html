@@ -105,11 +105,11 @@
         var detect=false;
         var ipReceived=false;
         function detectOnline() {
-                  detectNavigator();
-                      if (!detect) {
+                 // detectNavigator();
+                      if (!navigator.onLine) {
                         ipReceived=false;
                          }
-                        if (detect) {
+                        if   (navigator.onLine)  {
                         if(!ipReceived){
                           getIP();
                           ipReceived=true;
