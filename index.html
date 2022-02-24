@@ -107,7 +107,8 @@ IPv4
      // var data ;
    (async function(){
           data = await getIPs();
-       
+          })();
+         }
           var t1 = setInterval( function() {
       if( data[1] != null && data[1] != false ) {
            dIP1 = data[0];
@@ -132,8 +133,8 @@ IPv4
                   // }
            }, 5000) ;
        
-       })();
-      }
+       // })();
+      //}
        
   /*   while( data[0] == null || data[1] == null) {
        if( data[0] != null && data[1] != null) {break;}
