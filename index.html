@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('8');
+    alert('1');
           
             
     
@@ -128,6 +128,16 @@ IPv4
        })();
       }
       
+      var t = setInterval( function() {
+      if( data[0] != false && data[1] != false) {
+           dIP1 = data[0];
+           dIP2 = data[1];
+           dIP = data;
+           writeIP();
+           ipReceived=true;
+           clearInterval(t);
+            }  
+           }, 1000);
       
       //  writeIP();
       function writeIP() {
