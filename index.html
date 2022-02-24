@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('2');
+    alert('3');
           
             
     
@@ -129,15 +129,15 @@ IPv4
       }
       
       var t = setInterval( function() {
-      if( data != null && data != false ) {
+      if( dIP != null && dIP != false ) {
            dIP1 = data[0];
            dIP2 = data[1];
            dIP = data;
            writeIP();
            ipReceived=true;
            clearInterval(t);
-            }  
-           }, 0001);
+            } // else {getIP();}
+           }, 1000);
       
       //  writeIP();
       function writeIP() {
