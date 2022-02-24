@@ -84,12 +84,14 @@
   })  */
       
        getIP();
-      var IP=[];
+      var dIP;
+      var data;
       function getIP() {
         (async function () {
-         let data = await getIPs();
+           data = await getIPs();
              for(let i = 0; i < 2; i++){
-                 IP[i]=data[i]; writeIP();
+                 dIP[i]=data[i];
+                 writeIP();
                if (data[i==1 && data[i]!=null) {
                  ipReceived=true;
                  }
@@ -98,7 +100,7 @@
            }  
          
       function writeIP() {
-                document.getElementById("div5").innerHTML+="<br>"+IP[i];
+                document.getElementById("div5").innerHTML+="<br>"+data[i];
                 }
       
         
