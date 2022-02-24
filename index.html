@@ -88,6 +88,7 @@
         (async function () {
           let data = await getIPs();
              for(let i = 0; i < 2; i++){
+                 dIPi=data[i];
               document.getElementById('div6').innerHTML += `<p>${data[i]}</p>`
              }
          })();
