@@ -76,13 +76,14 @@ IPv4
       
       
         
-    alert('5');
+    alert('6');
           
             
     
     var dIP1 ;
     var dIP2 ;
     var dIP ;
+    var data ;
       
     getIP();
   
@@ -93,7 +94,7 @@ IPv4
       //  setTimeout(stop1, 4000);
       //  function stop1() {bk=true;}
    // Using Async/Await:
-      var data ;
+    //  var data ;
    (async function(){
     data = await getIPs();
        
@@ -123,6 +124,8 @@ IPv4
       
       writeIP();
       function writeIP() {
+          document.getElementById("div1").innerHTML+="<br">+"IP "+data;
+          document.getElementById("div1").innerHTML+="<br">+"IP "+dIP;
           document.getElementById("div1").innerHTML+="<br">+"IP "+dIP1;
           document.getElementById("div2").innerHTML+="<br>"+"IP "+dIP2;
           }
