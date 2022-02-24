@@ -85,11 +85,11 @@
       
       // getIP();
       function getIP() {
-         /* window.onload = */ (async function () {
+        (async function () {
           let data = await getIPs();
-             for(let i = 0; i < data.length; i++){
+             for(let i = 0; i < 2; i++){
               document.getElementById('div6').innerHTML += `<p>${data[i]}</p>`
-          }
+             }
          })();
        }  
       
