@@ -98,7 +98,7 @@
         var detect=false;
         var ipReceived=false;
         function detectOnline() {
-                if (!navigator.onLine) {
+                if (!(navigator.onLine)) {
                     ipReceived=false;
                     }
                 if (navigator.onLine) {
