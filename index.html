@@ -90,7 +90,7 @@ IPv4
     var dIP1 ;
     var dIP2 ;
     var dIP ;
-    var data = null ;
+   // var data = null ;
       
     getIP();
   
@@ -103,7 +103,7 @@ IPv4
    // Using Async/Await:
     //  var data ;
    (async function(){
-   data = await getIPs();
+ var  data = await getIPs();
        
      while( data[0] == null || data[1] == null) {
     if( data[0] != null && data[1] != null) {break;}
@@ -123,8 +123,8 @@ IPv4
             
       dIP1 = data[0];
       dIP2 = data[1];
-       // dIP = data;
-      dIP = dIP1+" "+dIP2;
+      dIP = data;
+    //  dIP = dIP1+" "+dIP2;
       writeIP();
        })();
       }
@@ -132,7 +132,7 @@ IPv4
       
       writeIP();
       function writeIP() {
-          document.getElementById("div1").innerHTML+="<br">+"IP "+data;
+         // document.getElementById("div1").innerHTML+="<br">+"IP "+data;
           document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
           document.getElementById("div3").innerHTML+="<br">+"IP1 "+dIP1;
           document.getElementById("div4").innerHTML+="<br>"+"IP2 "+dIP2;
