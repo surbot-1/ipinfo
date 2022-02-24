@@ -88,11 +88,14 @@
         (async function () {
           let data = await getIPs();
              for(let i = 0; i < 2; i++){
-                 dIPi=data[i];
-              document.getElementById('div6').innerHTML += `<p>${data[i]}</p>`
-             }
-         })();
-       }  
+               var  IP[i]=data[i];
+               if (data[i-1]!=null && data[i]!=null) {
+                 ipReceived=true;
+                 }
+                }
+             })();
+           }  
+         
       
        
       
