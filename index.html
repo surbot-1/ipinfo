@@ -91,21 +91,14 @@
          let  data = await getIPs();
              for(let i = 0; i < 2; i++){
                   dIP[i]=data[i];
-                 //  writeIP();
-               //  document.getElementById("div5").innerHTML+="<br>"+dIP;
-               if (i==1 && data[i]!=null) {
+                 if (i==1 && data[i]!=null) {
                   ipReceived=true;
                   writeIP();
                  }
                 }
              })();
            }  
-         
-      function writeIP() {
-                document.getElementById("div5").innerHTML+="<br>"+dIP[1];
-                }
-      
-        
+               
         var ipReceived=false;
         function detectOnline() {
                if (navigator.onLine) {
@@ -116,12 +109,19 @@
                 } else {
                    ipReceived=false;
                    }
-              }     
+              }      
+         
+      
+      
+        
+        
                         
+          function writeIP() {
+                document.getElementById("div5").innerHTML+="<br>"+dIP[1];
+                }     
                      
                      
-                     
-        //  setInterval(detectOnline,1000);
+          setInterval(detectOnline,1000);
         
    
           
