@@ -74,28 +74,30 @@ IPv4
       
       
         
-    alert('2');
+    alert('3');
           
             
+    
+    var dIP1 ;
+    var dIP2 ;
     var dIP ;
-     
       
     getIP();
   
-    var dIP1 ;
-    var dIP2 ;
-   // var dIP ;
-    var data =[];
+    
+    
     function getIP() {
        // var bk=false;
       //  setTimeout(stop1, 4000);
       //  function stop1() {bk=true;}
    // Using Async/Await:
+      var data =[];
    (async function(){
     data = await getIPs();
-   //  while( data[0] == null || data[1] == null) {
-//  if( data[0] != null && data[1] != null) {break;}
-    //  }
+       
+    /* while( data[0] == null || data[1] == null) {
+    if( data[0] != null && data[1] != null) {break;}
+      } */
   
 /*   var t = setInterval( function() {
           if( data[0] != null && data[1] != null) {
