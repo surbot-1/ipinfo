@@ -82,7 +82,7 @@
   getIPs().then(data=>{
   console.log(data.join('\n'))
   })  */
-      
+      alert('1');
        getIP();
       var dIP;
       var data;
@@ -91,7 +91,8 @@
            data = await getIPs();
              for(let i = 0; i < 2; i++){
                 // dIP+=data[i];
-                 writeIP();
+                // writeIP();
+                 document.getElementById("div5").innerHTML+="<br>"+data[i];
                if (i==1 && data[i]!=null) {
                  ipReceived=true;
                  }
@@ -99,9 +100,9 @@
              })();
            }  
          
-      function writeIP() {
-                document.getElementById("div5").innerHTML+="<br>"+data[i];
-                }
+   //   function writeIP() {
+             //   document.getElementById("div5").innerHTML+="<br>"+data[i];
+             //   }
       
         
         var ipReceived=false;
