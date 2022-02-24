@@ -8,7 +8,8 @@
   
 <body>
   
-
+<ol> id="ol1"> </ol>
+    
 <center>
 <div id="div1"></div>
 <div id="div2"></div>
@@ -89,7 +90,7 @@
       window.onload = async function () {
   let data = await getIPs()
   for(let i = 0; i < data.length; i++){
-    document.getElementById('div5').innerHTML += `<li>${data[i]}</li>`
+    document.getElementById('ol1').innerHTML += `<li>${data[i]}</li>`
   }
 }
       
