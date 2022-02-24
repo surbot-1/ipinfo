@@ -102,20 +102,20 @@
                           }
                      }
       
-        var detect=false;
+        
         var ipReceived=false;
         function detectOnline() {
-                 
-                      if (navigator.onLine) {
-                        ipReceived=false;
-                         }
-                        if   (navigator.onLine)  {
-                        if(!ipReceived){
-                          getIP();
-                          ipReceived=true;
-                         }
-                       }
-                     } 
+               if (navigator.onLine) {
+                   if (!ipReceived){
+                        getIP();
+                        ipReceived=true;
+                        }
+                } else {
+                   ipReceived=false;
+                   }
+                 }     
+                        
+                     
                      
                      
           setInterval(detectOnline,1000);
