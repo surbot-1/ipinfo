@@ -83,7 +83,7 @@ IPv4
       
       
         
-    alert('4');
+    alert('6');
           
             
     
@@ -95,7 +95,7 @@ IPv4
      var previousOnline=false;
      var ipReceived=false;
       
-     // var data = null ;
+      var data = null ;
       
     
   
@@ -106,7 +106,7 @@ IPv4
       //  setTimeout(stop1, 4000);
       //  function stop1() {bk=true;}
    // Using Async/Await:
-      var data ;
+     // var data ;
    (async function(){
        data = await getIPs();
        
@@ -129,7 +129,7 @@ IPv4
       }
       
       var t = setInterval( function() {
-      if( data[1] != false) {
+      if( data[1] != null && data[1] != false) {
            dIP1 = data[0];
            dIP2 = data[1];
            dIP = data;
