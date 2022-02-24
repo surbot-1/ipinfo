@@ -87,15 +87,20 @@ IPv4
           
             
     
-    var dIP1 ;
-    var dIP2 ;
-    var dIP ;
+     var dIP1 ;
+     var dIP2 ;
+     var dIP ;
+      
+     var detect=false;
+     var previousOnline=false;
+     var ipReceived=false;
+      
    // var data = null ;
       
-    getIP();
+    
   
     
-    
+            getIP();
     function getIP() {
        // var bk=false;
       //  setTimeout(stop1, 4000);
@@ -103,11 +108,19 @@ IPv4
    // Using Async/Await:
     //  var data ;
    (async function(){
- var  data = await getIPs();
+ let  data = await getIPs();
        
-     while( data[0] == null || data[1] == null) {
-    if( data[0] != null && data[1] != null) {break;}
-      } 
+  /*   while( data[0] == null || data[1] == null) {
+       if( data[0] != null && data[1] != null) {break;}
+      } */
+       
+       if( data[0] != null && data[1] != null) {
+           dIP1 = data[0];
+           dIP2 = data[1];
+           dIP = data;
+           writeIP();
+           ipReceived=true;
+            }
   
 /*   var t = setInterval( function() {
           if( data[0] != null && data[1] != null) {
@@ -121,11 +134,11 @@ IPv4
          clearInterval(t);
          }, 4000);  */
             
-      dIP1 = data[0];
-      dIP2 = data[1];
-      dIP = data;
+    //  dIP1 = data[0];
+    //  dIP2 = data[1];
+    //  dIP = data;
     //  dIP = dIP1+" "+dIP2;
-      writeIP();
+     //  writeIP();
        })();
       }
       
@@ -143,9 +156,9 @@ IPv4
          
  /*     setInterval( detectOnline , 5000);  
       
-                 var detect=false;
-                 var previousOnline=false;
-                 var ipReceived=false;
+               //  var detect=false;
+               //  var previousOnline=false;
+               //  var ipReceived=false;
       
       function detectNavigator() { 
                   if (navigator.onLine) {
