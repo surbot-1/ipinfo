@@ -84,11 +84,12 @@
   })  */
       
       // getIP();
+      var IP=null;
       function getIP() {
         (async function () {
           let data = await getIPs();
              for(let i = 0; i < 2; i++){
-               var  IP[i]=data[i];
+                 IP[i]=data[i]; writeIP();
                if (data[i-1]!=null && data[i]!=null) {
                  ipReceived=true;
                  }
@@ -96,8 +97,9 @@
              })();
            }  
          
-      
-       
+      function writeIP() {
+                document.getElementById("div5").innerHTML+="<br>"+IP[i];
+                }
       
         
         var ipReceived=false;
@@ -105,7 +107,7 @@
                if (navigator.onLine) {
                    if (!ipReceived){
                         getIP();
-                        ipReceived=true;
+                        // ipReceived=true;
                         }
                 } else {
                    ipReceived=false;
@@ -208,13 +210,13 @@
           document.getElementById("div2").innerHTML+="<br">+"IP0 "+dIP;
            }, 1000); */
       
-      //  writeIP();
+    /*  //  writeIP();
       function writeIP() {
           document.getElementById("div1").innerHTML+="<br>"+"IP "+data;
           document.getElementById("div2").innerHTML+="<br>"+"IP0 "+dIP;
           document.getElementById("div3").innerHTML+="<br>"+"IP1 "+dIP1;
           document.getElementById("div4").innerHTML+="<br>"+"IP2 "+dIP2;
-          }
+          } */
       
   
 /*   var t = setInterval( function() {
